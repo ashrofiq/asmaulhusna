@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asmaul Husna Quest – Belajar Asmaul Husna</title><meta name="theme-color" content="#7B4B2A">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Nunito:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8F3EE;--card:#fff;--ink:#2E2118;--mute:#76655A;--p:#7B4B2A;--pbg:#F1E5DA;--gold:#E3A62A;--ok:#1E8A4C;--okbg:#DCF3E4;--bad:#C0392B;--badbg:#FBE3DF;--line:#E0D0C2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1B130D;--card:#2A1E15;--ink:#FAF3EC;--mute:#D3C2B3;--p:#E0B48A;--pbg:#4A3424;--gold:#FFCB5C;--ok:#86E8AB;--okbg:#124A2E;--bad:#FFA396;--badbg:#5E2823;--line:#6B5039}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1B130D;--card:#2A1E15;--ink:#FAF3EC;--mute:#D3C2B3;--p:#E0B48A;--pbg:#4A3424;--gold:#FFCB5C;--ok:#86E8AB;--okbg:#124A2E;--bad:#FFA396;--badbg:#5E2823;--line:#6B5039}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Nunito,system-ui,sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:16px 16px 80px}
+.ar{font-family:Amiri,'Traditional Arabic',serif;direction:rtl;unicode-bidi:isolate;font-size:1.5em;line-height:1.9}
+h2{font-size:1.2rem;margin:0 0 8px}h3{margin:14px 0 4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.btn{font:inherit;font-weight:800;border:0;border-radius:12px;padding:12px 18px;background:var(--p);color:#fff;cursor:pointer;width:100%;margin-top:8px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn:not(.alt){color:#1B130D}}
+:root[data-theme="dark"] .btn:not(.alt){color:#1B130D}
+.btn.alt{background:transparent;color:var(--p);border:2px solid var(--p)}
+.btn.sm{width:auto;margin:0;padding:8px 14px}.btn:disabled{opacity:.6;cursor:not-allowed}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.top{display:flex;justify-content:space-between;align-items:center;font-weight:800;margin-bottom:6px}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--p);transition:width .3s}
+.opt{display:block;width:100%;text-align:left;font:inherit;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0;cursor:pointer}
+.opt.ar{text-align:right;font-size:1.4rem}.opt:hover:not(:disabled){border-color:var(--p)}
+.opt.sel{border-color:var(--gold);background:var(--pbg)}.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.bad{border-color:var(--bad);background:var(--badbg)}
+.tag{display:inline-block;font-size:.8rem;font-weight:800;background:var(--pbg);color:var(--p);border-radius:20px;padding:2px 10px}
+.sent{text-align:center;font-size:1.6em;background:var(--pbg);border-radius:12px;padding:8px}
+.fb{border-radius:12px;padding:12px 14px;margin-top:12px}.fb.ok{background:var(--okbg)}.fb.bad{background:var(--badbg)}.fb b.t{display:block;margin-bottom:4px}
+.mt{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mt .opt{margin:0 0 8px;text-align:center}.mt .opt.done{opacity:.85;border-color:var(--ok);background:var(--okbg)}
+table{width:100%;border-collapse:collapse;margin:8px 0}td,th{border:1px solid var(--line);padding:6px 8px;text-align:left;font-size:.95rem}
+.stars{font-size:2.4rem;color:var(--gold);text-align:center}
+.mute{color:var(--mute);font-size:.9rem}.stage{display:flex;justify-content:space-between;align-items:center;gap:10px}.stage.lock{opacity:.72}.acts{display:flex;gap:8px;flex-shrink:0}.lk{font-size:1.4rem}
+.thm{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);width:46px;height:46px;border-radius:50%;border:2px solid var(--line);background:var(--card);color:var(--ink);font-size:1.3rem;cursor:pointer;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.ver{text-align:center;color:var(--mute);font-size:.8rem;padding:0 16px 14px}
+.brand{display:flex;gap:14px;align-items:center;margin:6px 0 10px}.brand svg{width:76px;height:76px;flex-shrink:0;filter:drop-shadow(0 4px 10px rgba(123,75,42,.4))}
+.ar-t{font-family:Amiri,serif;font-size:1.4rem;color:var(--gold);line-height:1.2;direction:rtl;text-align:left}
+.ttl{font-family:'Playfair Display',Georgia,serif;font-size:2rem;font-weight:700;line-height:1.1}.ttl i{color:var(--p)}
+.ttl::after{content:'';display:block;height:3px;width:70px;margin-top:6px;border-radius:3px;background:linear-gradient(90deg,var(--gold),transparent)}
+.sub{color:var(--mute);font-size:.88rem;margin-top:4px}
+.x{font:inherit;font-weight:800;width:36px;height:36px;border-radius:50%;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.65);display:flex;align-items:center;justify-content:center;padding:20px;z-index:40}.ov .card{max-width:420px;width:100%}
+.ex{margin-top:4px;padding:6px 10px;background:var(--pbg);border-radius:8px;font-size:.95rem}
+.in{margin:10px 0;padding:10px 12px;background:var(--pbg);border-radius:10px;border-left:4px solid var(--gold)}
+.gl{margin:8px 0;padding:8px 12px;border:1px solid var(--line);border-radius:10px}.gl p{margin:4px 0}
+.xf{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:var(--card);color:var(--ink);font:800 1.2rem/1 Nunito,sans-serif;cursor:pointer;z-index:30;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.dl{margin-top:8px;padding:8px 12px;border-left:4px solid var(--gold);background:var(--pbg);border-radius:8px}.dl .ar{font-size:1.3em}.dl p{margin:2px 0}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const $=s=>document.querySelector(s),app=$('#app'),A=s=>`<span class="ar">${s}</span>`,sh=a=>[...a].sort(()=>Math.random()-.5);
+/* [lat, arab, arti, penjelasan, pengamalan] */
+const N=[
+{t:'Kasih sayang dan kesucian',p:'Mulailah dari nama-nama yang paling sering kita ucapkan, yaitu dalam basmalah. Dua nama pertama sama-sama berakar dari kata rahmat (kasih sayang), tetapi cakupannya berbeda.',n:[
+['Ar-Rahman','الرَّحْمَنُ','Maha Pengasih','Kasih sayang-Nya meliputi semua makhluk di dunia, beriman maupun tidak.','Berbuat baik kepada siapa pun, termasuk hewan dan alam.'],
+['Ar-Rahim','الرَّحِيمُ','Maha Penyayang','Kasih sayang-Nya yang khusus dilimpahkan kepada orang beriman, terutama di akhirat.','Menjaga iman agar layak menerima rahmat-Nya.'],
+['Al-Malik','الْمَلِكُ','Maha Merajai','Pemilik dan penguasa mutlak seluruh alam; kekuasaan manusia hanyalah titipan.','Tidak sombong ketika memegang jabatan.'],
+['Al-Quddus','الْقُدُّوسُ','Maha Suci','Bersih dari segala kekurangan dan sifat yang tidak pantas.','Menjaga kebersihan lahir dan batin.']]},
+{t:'Keselamatan dan keperkasaan',p:'Kelompok ini mengenalkan Allah sebagai sumber rasa aman, kekuatan, dan ampunan.',n:[
+['As-Salam','السَّلَامُ','Maha Memberi Kesejahteraan','Sumber keselamatan dan kedamaian bagi makhluk-Nya.','Menebar salam dan menjaga perdamaian.'],
+['Al-Mu’min','الْمُؤْمِنُ','Maha Memberi Keamanan','Memberi rasa aman dan membenarkan janji-Nya.','Menjadi orang yang membuat orang lain merasa aman.'],
+['Al-Aziz','الْعَزِيزُ','Maha Perkasa','Tidak terkalahkan, dan kemuliaan sejati berasal dari-Nya.','Mencari kemuliaan lewat ketaatan, bukan kesombongan.'],
+['Al-Ghaffar','الْغَفَّارُ','Maha Pengampun','Berulang kali menutupi dan mengampuni dosa hamba-Nya.','Rajin beristighfar dan mudah memaafkan.']]},
+{t:'Ilmu dan rezeki',p:'Nama-nama ini mengingatkan bahwa rezeki, pendengaran, dan penglihatan kita berada dalam pengawasan serta pemberian Allah.',n:[
+['Ar-Razzaq','الرَّزَّاقُ','Maha Pemberi Rezeki','Memberi rezeki kepada seluruh makhluk tanpa terkecuali.','Berikhtiar dan bersyukur atas rezeki yang halal.'],
+['Al-Alim','الْعَلِيمُ','Maha Mengetahui','Ilmu-Nya meliputi segala sesuatu, yang tampak maupun tersembunyi.','Menjaga niat karena Allah mengetahui isi hati.'],
+['As-Sami’','السَّمِيعُ','Maha Mendengar','Mendengar setiap suara dan doa, sekecil apa pun.','Berdoa dengan yakin dan menjaga ucapan.'],
+['Al-Bashir','الْبَصِيرُ','Maha Melihat','Melihat segala perbuatan tanpa ada yang luput.','Berbuat jujur walaupun tidak ada yang melihat.']]},
+{t:'Kemuliaan dan kebijaksanaan',p:'Setiap ketentuan Allah mengandung hikmah. Kelompok ini membantu kita memandang takdir dengan tenang.',n:[
+['Al-Karim','الْكَرِيمُ','Maha Mulia','Pemurah dan memberi tanpa diminta, serta tidak pernah mengecewakan.','Dermawan dan memuliakan tamu.'],
+['Al-Hakim','الْحَكِيمُ','Maha Bijaksana','Setiap ciptaan dan aturan-Nya mengandung hikmah.','Berprasangka baik terhadap ketentuan-Nya.'],
+['Al-Wadud','الْوَدُودُ','Maha Pencinta','Mencintai hamba-Nya yang taat dan menanamkan cinta di hati mereka.','Menumbuhkan rasa cinta dan persaudaraan.'],
+['Al-Lathif','اللَّطِيفُ','Maha Lembut','Mengetahui detail terkecil dan mengurus hamba-Nya dengan lembut.','Bertutur kata dan bersikap lembut.']]},
+{t:'Kehidupan dan penciptaan',p:'Penutup perjalanan awal ini: Allah hidup abadi, menegakkan semua makhluk, mencipta, dan menjadi sandaran terbaik.',n:[
+['Al-Hayy','الْحَيُّ','Maha Hidup','Hidup yang abadi, tanpa awal dan akhir.','Menggunakan hidup untuk amal saleh.'],
+['Al-Qayyum','الْقَيُّومُ','Maha Berdiri Sendiri','Tidak butuh siapa pun, sementara semua makhluk bergantung pada-Nya.','Menggantungkan harapan hanya kepada Allah.'],
+['Al-Khaliq','الْخَالِقُ','Maha Pencipta','Menciptakan segala sesuatu dari tiada.','Merenungi ciptaan-Nya dan menjaga alam.'],
+['Al-Wakil','الْوَكِيلُ','Maha Pemelihara','Tempat terbaik untuk menyerahkan segala urusan.','Berusaha maksimal lalu bertawakal.']]}
+];
+const D1=['هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ','Dialah Allah, tidak ada tuhan selain Dia, Maha Merajai, Maha Suci.','QS. Al-Hasyr: 23'],D2=['السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ','Maha Memberi Kesejahteraan, Maha Memberi Keamanan, Maha Memelihara, Maha Perkasa, Maha Kuasa.','QS. Al-Hasyr: 23'],D3=['اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ','Allah, tidak ada tuhan selain Dia, Yang Maha Hidup, Yang Terus-menerus mengurus makhluk-Nya.','QS. Al-Baqarah: 255'],D4=['وَهُوَ السَّمِيعُ الْبَصِيرُ','Dan Dia Maha Mendengar, Maha Melihat.','QS. Asy-Syura: 11'];
+const DL={'Ar-Rahman':['الرَّحْمَٰنِ الرَّحِيمِ','Yang Maha Pengasih, Maha Penyayang.','QS. Al-Fatihah: 3'],'Ar-Rahim':['وَكَانَ بِالْمُؤْمِنِينَ رَحِيمًا','Dan Dia Maha Penyayang kepada orang-orang yang beriman.','QS. Al-Ahzab: 43'],'Al-Malik':D1,'Al-Quddus':D1,'As-Salam':D2,'Al-Mu’min':D2,'Al-Aziz':D2,
+'Al-Ghaffar':['وَإِنِّي لَغَفَّارٌ لِمَنْ تَابَ وَآمَنَ وَعَمِلَ صَالِحًا ثُمَّ اهْتَدَىٰ','Sungguh, Aku Maha Pengampun bagi orang yang bertobat, beriman, dan beramal saleh, kemudian tetap di jalan yang benar.','QS. Thaha: 82'],
+'Ar-Razzaq':['إِنَّ اللَّهَ هُوَ الرَّزَّاقُ ذُو الْقُوَّةِ الْمَتِينُ','Sesungguhnya Allah, Dialah Maha Pemberi Rezeki, Pemilik Kekuatan lagi Sangat Kokoh.','QS. Adz-Dzariyat: 58'],'Al-Alim':['وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ','Dan Dia Maha Mengetahui segala sesuatu.','QS. Al-Baqarah: 29'],'As-Sami’':D4,'Al-Bashir':D4,
+'Al-Karim':['يَا أَيُّهَا الْإِنسَانُ مَا غَرَّكَ بِرَبِّكَ الْكَرِيمِ','Wahai manusia, apa yang memperdayakan kamu terhadap Tuhanmu Yang Maha Mulia?','QS. Al-Infithar: 6'],'Al-Hakim':['إِنَّكَ أَنتَ الْعَلِيمُ الْحَكِيمُ','Sungguh, Engkaulah Yang Maha Mengetahui, Maha Bijaksana.','QS. Al-Baqarah: 32'],'Al-Wadud':['وَهُوَ الْغَفُورُ الْوَدُودُ','Dan Dialah Yang Maha Pengampun, Maha Pencinta.','QS. Al-Buruj: 14'],'Al-Lathif':['وَهُوَ اللَّطِيفُ الْخَبِيرُ','Dan Dia Maha Lembut, Maha Teliti.','QS. Al-Mulk: 14'],
+'Al-Hayy':D3,'Al-Qayyum':D3,'Al-Khaliq':['هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ','Dialah Allah Yang Maha Pencipta, Yang Mengadakan, Yang Membentuk rupa.','QS. Al-Hasyr: 24'],'Al-Wakil':['حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ','Cukuplah Allah bagi kami, dan Dia sebaik-baik pelindung.','QS. Ali ‘Imran: 173']};
+const dl=d=>d?`<div class="dl"><b>Dalil</b><div class="ar">${d[0]}</div><p>“${d[1]}”</p><div class="mute">${d[2]}</div></div>`:'';
+const NN=N.length,CP=[2,4],ALLV=N.flatMap(m=>m.n);
+const LV=[{n:'Pemula',d:'Tanpa batas waktu, nama Arab ke arti. Lulus 80%.',ps:.8,tm:0,K:[0,2]},{n:'Menengah',d:'Tanpa batas waktu, dua arah. Lulus 80%.',ps:.8,tm:0,K:[0,1,2]},{n:'Lanjutan',d:'20 detik per soal, arti ke nama Arab. Lulus 80%.',ps:.8,tm:20,K:[1,2]}];
+let S={read:[],L:[]},lvl=0,P,Q=[],LOG=[],i=0,score=0,streak=0,right=0,locked=false,cur=0,rv=null,tmr=null;
+try{S=Object.assign(S,JSON.parse(localStorage.getItem('aq')))}catch(e){}
+const save=()=>{try{localStorage.setItem('aq',JSON.stringify(S))}catch(e){}};
+function setLv(l){lvl=l;P=S.L[l]=S.L[l]||{};P.pass=P.pass||[];P.best=P.best||[];P.rev=P.rev||[]}setLv(0);
+const lvOpen=l=>l==0||!!(S.L[l-1]&&S.L[l-1].up),open_=n=>n==0||(P.pass[n-1]&&(!CP.includes(n-1)||P.rev[n-1]));
+const ttl=n=>(n+1)+'. '+N[n].t;
+/* pembuat soal */
+function mk(x,k,yv){const d=sh(ALLV.filter(y=>y[2]!=x[2]));
+ if(k==0){const o=sh([x[2],d[0][2],d[1][2]]);return{t:'mcq',k:'Kuis',q:'Apa arti nama Allah ini?',ar:x[1],o,a:o.indexOf(x[2]),e:`${A(x[1])} (${x[0]}) berarti “${x[2]}”.`}}
+ if(k==1){const o=sh([x[1],d[0][1],d[1][1]]);return{t:'mcq',k:'Kuis',q:`Nama mana yang berarti “${x[2]}”?`,o,a:o.indexOf(x[1]),a2:1,e:`“${x[2]}” adalah ${A(x[1])} (${x[0]}).`}}
+ const y=yv===undefined?Math.random()<.5:yv;return{t:'tf',k:'Benar atau salah',q:`${x[0]} berarti “${y?x[2]:d[0][2]}”.`,a:y,e:`${y?'Benar':'Salah'}. ${x[0]} berarti “${x[2]}”.`}}
+const mtc=ms=>{const w=sh(ms.flatMap(m=>N[m].n)).slice(0,4);return{t:'match',k:'Jodohkan',q:'Jodohkan nama dengan artinya.',p:w.map(x=>[x[0],x[2]]),e:w.map(x=>`${x[0]} = ${x[2]}`).join('; ')+'.'}};
+function build(ms,n,own){const K=LV[lvl].K,m=Math.max(1,Math.round(n/10));let p=[];ms.flatMap(g=>N[g].n).forEach(x=>K.forEach(k=>k==2?p.push([x,2,true],[x,2,false]):p.push([x,k])));p=sh(p);if(own)p.sort((a,b)=>own.includes(b[0])-own.includes(a[0]));
+ return sh([...p.slice(0,n-m).map(a=>mk(...a)),...Array.from({length:m},()=>mtc(ms))])}
+const rng=g=>[...Array(g+1).keys()];
+function startQuiz(n){cur=n;rv=null;go(build(rng(n),10,N[n].n))}
+function startReview(g){cur=g;rv=g;go(build(rng(g),g==NN-1?30:20))}
+function go(q){Q=q;LOG=[];i=0;score=0;streak=0;right=0;show();scrollTo(0,0)}
+/* halaman */
+const LOGO=`<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Asmaul Husna Quest"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A66A3C"/><stop offset="1" stop-color="#4A2B14"/></linearGradient></defs><rect width="80" height="80" rx="20" fill="url(#lg)"/><path d="M40 34c-6-4-14-5-23-3v26c9-2 17-1 23 3 6-4 14-5 23-3V31c-9-2-17-1-23 3z" fill="#FFF3DC"/><path d="M40 34v26" stroke="#A66A3C" stroke-width="2"/><path d="M23 40h11M23 46h11M46 40h11M46 46h11" stroke="#A66A3C" stroke-width="2" stroke-linecap="round" opacity=".6"/><path d="M45 9a10 10 0 1 0 0 18a8 8 0 1 1 0-18z" fill="#FFCB5C"/><circle cx="52" cy="18" r="2.2" fill="#FFCB5C"/></svg>`;
+document.head.insertAdjacentHTML('beforeend',`<link rel="icon" href="data:image/svg+xml,${encodeURIComponent(LOGO)}">`);
+const HERO=`<div class="brand">${LOGO}<div><div class="ar-t">الْأَسْمَاءُ الْحُسْنَى</div><div class="ttl">Asmaul Husna <i>Quest</i></div><div class="sub">Mengenal nama-nama Allah, selangkah demi selangkah</div></div></div>`;
+function home(){
+ let h=HERO+`<div class="mute">Pilih level, baca materi, lulus kuis, dan murojaah di materi tertentu.</div><div class="acts" style="margin:10px 0">`+LV.map((L,l)=>`<button class="btn sm ${l==lvl?'':'alt'}" ${lvOpen(l)?'':'disabled'} onclick="setLv(${l});home()">${lvOpen(l)?'':'🔒 '}${L.n}</button>`).join('')+`</div><div class="mute">${LV[lvl].d}</div>`;
+ for(let n=0;n<NN;n++){const u=open_(n),st=P.pass[n]?'Lulus ★ nilai '+P.best[n]+'%':!u?'Terkunci':S.read[n]?'Kuis terbuka':'Baca materi dulu';
+  h+=`<div class="card stage ${u?'':'lock'}"><div><b>${ttl(n)}</b><div class="mute">${st}</div></div>`+(u?`<div class="acts"><button class="btn sm alt" onclick="openMateri(${n})">Materi</button><button class="btn sm" ${S.read[n]?'':'disabled'} onclick="startQuiz(${n})">Kuis</button></div>`:'<span class="lk">🔒</span>')+`</div>`;
+  if(CP.includes(n)){const ok=P.pass[n],f=n==NN-1;h+=`<div class="card stage ${ok?'':'lock'}"><div><b>${f?'Murojaah akhir (naik level)':'Murojaah semua materi'}</b><div class="mute">${P.rev[n]?'Lulus ✓':ok?'Wajib lulus untuk lanjut':'Terbuka setelah kuis lulus'}</div></div>`+(ok?`<button class="btn sm" onclick="startReview(${n})">Mulai</button>`:'<span class="lk">🔒</span>')+`</div>`}}
+ app.innerHTML=h+`<button class="btn alt" onclick="resetAll()">Reset progres</button>`;scrollTo(0,0)}
+function openMateri(n){cur=n;const m=N[n];
+ app.innerHTML=`<div class="card"><h2>${ttl(n)}</h2><div class="in"><b>Pengantar</b><p>${m.p}</p></div>${dl(['وَلِلَّهِ الْأَسْمَاءُ الْحُسْنَىٰ فَادْعُوهُ بِهَا','Hanya milik Allah asmaulhusna, maka bermohonlah kepada-Nya dengan menyebutnya.','QS. Al-A‘raf: 180'])}<table><tr><th>Nama</th><th>Arab</th><th>Arti</th></tr>${m.n.map(x=>`<tr><td>${x[0]}</td><td class="ar">${x[1]}</td><td>${x[2]}</td></tr>`).join('')}</table><h3>Penjelasan satu per satu</h3>${m.n.map(x=>`<div class="gl"><b>${x[0]}</b> ${A(x[1])}<div class="mute">${x[2]}</div><p>${x[3]}</p><div class="ex"><b>Meneladani:</b> ${x[4]}</div>${dl(DL[x[0]])}</div>`).join('')}</div><button class="xf" aria-label="Tutup materi" onclick="home()">✕</button><button class="btn" onclick="doneRead()">Selesai membaca, buka kuis</button><button class="btn alt" onclick="home()">Kembali</button>`;scrollTo(0,0)}
+function doneRead(){S.read[cur]=true;save();startQuiz(cur)}
+/* kuis */
+const head=()=>`<div class="top"><button class="x" aria-label="Tutup kuis" onclick="quitQuiz()">✕</button><span>Soal ${i+1}/${Q.length} <b id="tm"></b></span><span>Skor ${score}${streak>1?' · Beruntun '+streak:''}</span></div><div class="bar"><i style="width:${i/Q.length*100}%"></i></div>`;
+function show(){locked=false;const q=Q[i];let h=head()+`<div class="card"><span class="tag">${q.k}</span><p><b>${q.q}</b></p>`+(q.ar?`<p class="sent ar">${q.ar}</p>`:'');
+ if(q.t=='mcq')h+=q.o.map((o,n)=>`<button class="opt ${q.a2?'ar':''}" onclick="pick(${n})">${o}</button>`).join('');
+ else if(q.t=='tf')h+=`<button class="opt" onclick="pick(true)">Benar</button><button class="opt" onclick="pick(false)">Salah</button>`;
+ else{q.L=sh(q.p.map(x=>x[0]));q.R=sh(q.p.map(x=>x[1]));q.sel=null;q.d=[];q.n=0;q.err=false;h+='<div class="mt"><div id="ml"></div><div id="mr"></div></div>'}
+ app.innerHTML=h+'<div id="fb"></div></div>';if(q.t=='match')dm();tick()}
+function tick(){clearInterval(tmr);const T=LV[lvl].tm;if(!T)return;let t=T;const f=()=>{const e=$('#tm');if(e)e.textContent='⏱ '+t+'s';if(locked){clearInterval(tmr);return}if(t--<=0){clearInterval(tmr);timeout()}};f();tmr=setInterval(f,1000)}
+function timeout(){if(locked)return;locked=true;const q=Q[i];document.querySelectorAll('.opt').forEach((b,n)=>{if(q.t=='tf'?n==(q.a?0:1):n==q.a)b.classList.add('ok')});fin(false,'<p>Waktu habis.</p>')}
+function pick(v){if(locked)return;locked=true;const q=Q[i],b=[...document.querySelectorAll('.opt')];
+ if(q.t=='tf'){const ok=v===q.a;b[q.a?0:1].classList.add('ok');if(!ok)b[v?0:1].classList.add('bad');return fin(ok)}
+ b.forEach((x,n)=>{if(n==q.a)x.classList.add('ok');else if(n==v)x.classList.add('bad')});fin(v==q.a)}
+function dm(){const q=Q[i];
+ $('#ml').innerHTML=q.L.map((l,n)=>`<button class="opt ${q.sel===n?'sel':''} ${q.d.includes('L'+n)?'done':''}" onclick="mL(${n})">${l}</button>`).join('');
+ $('#mr').innerHTML=q.R.map((r,n)=>`<button class="opt ${q.d.includes('R'+n)?'done':''}" onclick="mR(${n})">${r}</button>`).join('')}
+function mL(n){const q=Q[i];if(locked||q.d.includes('L'+n))return;q.sel=n;dm()}
+function mR(n){const q=Q[i];if(locked||q.sel===null||q.d.includes('R'+n))return;
+ const pr=q.p.find(x=>x[0]==q.L[q.sel]);
+ if(pr[1]==q.R[n]){q.d.push('L'+q.sel,'R'+n);q.n++;q.sel=null;if(q.n==q.p.length){locked=true;dm();return fin(!q.err)}}else{q.err=true;q.sel=null;streak=0}dm()}
+function fin(ok,extra=''){const q=Q[i];LOG.push({q,ok,extra});
+ if(ok){streak++;right++;score+=10+Math.min(streak-1,5)*2}else streak=0;
+ $('#fb').innerHTML=`<div class="fb ${ok?'ok':'bad'}"><b class="t">${ok?'Tepat!':'Belum tepat'}</b>${extra}<div class="mute">Pembahasan lengkap tersedia setelah kuis selesai.</div></div><button class="btn" onclick="next()">${i==Q.length-1?'Lihat hasil':'Lanjut'}</button>`;
+ $('#fb').scrollIntoView({behavior:'smooth',block:'nearest'})}
+function next(){i++;i>=Q.length?end():show();scrollTo(0,0)}
+function quitQuiz(){if($('#ov'))return;document.body.insertAdjacentHTML('beforeend',`<div class="ov" id="ov"><div class="card"><h2>Tutup kuis?</h2><p>Hasil kuis ini tidak akan disimpan.</p><button class="btn alt" onclick="$('#ov').remove()">Lanjutkan kuis</button><button class="btn" onclick="doQuit()">Ya, tutup kuis</button></div></div>`)}
+function doQuit(){$('#ov').remove();clearInterval(tmr);locked=true;home()}
+function end(){clearInterval(tmr);
+ const L=LV[lvl],p=right/Q.length,ok=p>=L.ps,s=p>=.85?3:ok?2:1,pc=Math.round(p*100),R=rv!==null,k=cur,last=k==NN-1,cp=CP.includes(k);
+ if(ok){if(R){P.rev[k]=true;if(last)P.up=true}else{P.pass[k]=true;P.best[k]=Math.max(P.best[k]||0,pc)}save()}
+ const B=(f,t,a)=>`<button class="btn ${a?'alt':''}" onclick="${f}">${t}</button>`;let nb='';
+ if(!ok)nb=B(`${R?'startReview':'startQuiz'}(${k})`,'Coba lagi')+(R?'':B(`openMateri(${k})`,'Baca ulang materi',1));
+ else if(!R&&cp)nb=B(`startReview(${k})`,'Mulai murojaah');
+ else if(!R||!last)nb=B(`openMateri(${k+1})`,'Lanjut ke materi berikutnya');
+ else nb=lvl<2?B(`setLv(${lvl+1});home()`,'Mulai level '+LV[lvl+1].n):'';
+ const hd=!ok?'Belum lulus (minimal '+Math.round(L.ps*100)+'%).':R?(last?(lvl<2?'Naik level! Level '+LV[lvl+1].n+' terbuka.':'Selamat, semua level tuntas!'):'Murojaah lulus! Materi berikutnya terbuka.'):cp?'Lulus! Sekarang murojaah semua materi.':'Lulus! Materi berikutnya terbuka.';
+ app.innerHTML=`<div class="card"><div class="stars">${'★'.repeat(s)}${'☆'.repeat(3-s)}</div><h2 style="text-align:center">${hd}</h2><p style="text-align:center">Benar ${right} dari ${Q.length} (${pc}%)<br>Skor <b>${score}</b></p></div><div class="card" id="ask"><b>Lihat pembahasan soal?</b><button class="btn" onclick="showReview()">Lihat pembahasan</button><button class="btn alt" onclick="$('#ask').style.display='none';$('#nx').style.display='block'">Tidak, lewati</button></div><div id="nx" style="display:none">${nb}<button class="btn alt" onclick="home()">Peta belajar</button></div>`}
+function showReview(){const nx=$('#nx').innerHTML;
+ app.innerHTML=`<h2>Pembahasan</h2>`+LOG.map((l,n)=>{const q=l.q;return `<div class="card"><span class="tag">${n+1}. ${q.k}</span> <b>${l.ok?'✓ Benar':'✗ Salah'}</b><p><b>${q.q}</b></p>${q.ar?`<p class="sent ar">${q.ar}</p>`:''}<div class="fb ${l.ok?'ok':'bad'}">${q.e}${l.extra}</div></div>`}).join('')+nx;scrollTo(0,0)}
+function resetAll(){if(confirm('Hapus semua progres?')){S={read:[],L:[]};setLv(0);save();home()}}
+/* tema */
+const root=document.documentElement,mq=matchMedia('(prefers-color-scheme: dark)'),isDark=()=>root.dataset.theme?root.dataset.theme=='dark':mq.matches;
+try{const t=localStorage.getItem('aqt');if(t)root.dataset.theme=t}catch(e){}
+const tb=document.createElement('button');tb.className='thm';tb.setAttribute('aria-label','Ganti mode gelap atau terang');
+const upd=()=>{tb.textContent=isDark()?'☀️':'🌙'};
+tb.onclick=()=>{const t=isDark()?'light':'dark';root.dataset.theme=t;try{localStorage.setItem('aqt',t)}catch(e){}upd()};
+document.body.appendChild(tb);upd();
+document.body.insertAdjacentHTML('beforeend','<div class="ver">Asmaul Husna Quest v1.0</div>');
+home();
+</script>
+</body>
+</html>
